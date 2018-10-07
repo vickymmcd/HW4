@@ -1,6 +1,7 @@
 `include "decoder1to32.v"
 `include "mux32to1by32.v"
 `include "register32.v"
+`include "register32zero.v"
 
 
 //------------------------------------------------------------------------------
@@ -30,7 +31,7 @@ input		Clk		// Clock (Positive Edge Triggered)
   wire[31:0] register0, register1, register2, register3, register4, register5, register6, register7, register8, register9, register10, register11, register12, register13, register14, register15, register16, register17, register18, register19, register20, register21, register22, register23, register24, register25, register26, register27, register28, register29, register30, register31;
   decoder1to32 decoder(decoded, RegWrite, WriteRegister);
 
-  register32 register0def(register0, WriteData, decoded[0], Clk);
+  register32zero register0def(register0, WriteData, decoded[0], Clk);
   register32 register1def(register1, WriteData, decoded[1], Clk);
   register32 register2def(register2, WriteData, decoded[2], Clk);
   register32 register3def(register3, WriteData, decoded[3], Clk);
