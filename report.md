@@ -5,4 +5,4 @@ Tests are located in the regfile.t.v file in this repository. To run the tests, 
 ```bash test.sh```
 
 ## Submission for deliverables 1 and 6
-![](submission.jpg)
+![](submission2.jpg)
